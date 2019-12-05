@@ -8,9 +8,13 @@ function App() {
     balls: 0,
     strikes: 0
   });
-  //Our count function is going to live in Display. Things are bound to get ugly.
-  const gameCount = (type) => {
+  //Our count function is going to live in App. Things are bound to get ugly.
+  const gameCount = (type, initialScores) => {
     let { balls, strikes } = scores;
+
+    if (initialScores) {
+      scores = initialScores;
+    }
 
     switch (type) {
       case "strike":
@@ -38,6 +42,7 @@ function App() {
     }
 
     setScores({ balls, strikes });
+    return (scores);
   }
 
   return (

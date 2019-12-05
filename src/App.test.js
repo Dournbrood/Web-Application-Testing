@@ -22,3 +22,9 @@ test('Strikes render', () => {
   const { getByTestId } = render(<App />);
   getByTestId(/strikes-display/i);
 });
+
+//  This is super broken right now. I'll fix it eventually...
+// test("Ball functions as expected", () => {
+//   const { gameCount } = render(<App />);
+//   expect(gameCount("ball", { balls: 1, strikes: 0 })).toBe({ balls: 2, strikes: 0 })
+// })
