@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
-export const Dashboard = (props) => {
+const Dashboard = (props) => {
     return (
         <>
-            <button>Strike</button>
-            <button>Ball</button>
-            <button>Foul</button>
-            <button>Hit</button>
+            <button data-testid="dash-button" onClick={() => props.gameCount("strike")}>Strike</button>
+            <button data-testid="dash-button" onClick={() => props.gameCount("ball")}>Ball</button>
+            <button data-testid="dash-button" onClick={() => props.gameCount("foul")}>Foul</button>
+            <button data-testid="dash-button" onClick={() => props.gameCount("hit")}>Hit</button>
         </>
     )
 }
+
+export default Dashboard;
